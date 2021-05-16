@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>our cars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="topHeader">
+            <div class="container"><a href="#">help line: +1-202-547-0156</a></div>
+        </div>
+        <nav class="container navFlex" id="mobileHeader">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo-header.png" alt="main logo">
+                </a>
+            </div>
+            <div class="siteMap">
+                <ul id="mobileLinks">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">our cars</a></li>
+                    <li><a href="#">reviews</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">pages</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+            <div class="iconCart">
+                <ul>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="cartVal"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>01</span></a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="topBanner">
+        <div class="bannerImage">
+            <h1>our cars</h1>
+        </div>
+        <div class="pageNav container">
+            <p><a href="#">home</a> / <a href="#">our cars</a></p>
+        </div>
+    </section>
+    <section class="bodyContent">
+        <div class="container">
+            <div class="row mobileRow">
+                <div class="col-lg-4 filterColumn">
+                    <h2>filters</h2>
+                    <div class="boxFilter">
+                        <!-- <input value="0" min="500" max="50000" step="500" type="range"> -->
+                        <select name="gear" id="gearFilter" onchange="onGearBoxchange()">
+                            <option value="">Gearbox type</option>
+                            <option value="auto">Auto</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                        <select name="fuel" id="fuelFilter" onchange="onFuelTypechange()">
+                            <option value="">Fuel type</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                        <button type="submit" onclick="onFilterChange()">apply filters <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="productFilter">
+                        <p id="available">Available Offers 0</p>
+                        <select name="relevant" id="relevantFilter">
+                            <option value="option1">Relevant</option>
+                            <option value="option2">Hourse Power</option>
+                            <option value="option3">Make Year</option>
+                        </select>
+                    </div>
+                    <div class="row" id="productListData">
+                        <div class="col-lg-6">
+                            <div class="productList">
+                                <h3>Fetching data from server......</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paginationGrid">
+                        <p id="pageItem">Page 1 of 6</p>
+                        <ul id="pagin">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="column1 col-lg-4">
+                    <img src="./images/logo.png" alt="footer logo" class="mb15">
+                    <p>Cras sit amet mi non orci pretium consectetur. Donec iaculis ante ac sollicitudin luctus. Phasellus ut lacus lacus. Phasellus sagittis ex id tortor tincidunt luctus. Donec consectetur consequat bibendum</p>
+                    <ul>
+                        <li><a href="#"><strong>rental information</strong></a></li>
+                        <li><a href="#"><strong>faq</strong></a></li>
+                    </ul>
+                    <input type="text" placeholder="search">
+                </div>
+                <div class="column2 col-lg-4">
+                    <h3>contact us:</h3>
+                    <strong>main office address:</strong>
+                    <p>unit 9, manor industrial estate, lower wash lane, warrington, WA4</p>
+                    <p>8:00am - 9:30pm</p>
+                    <p>other office locations</p>
+                    <p><strong>rotorseml@eml.fr</strong></p>
+                    <p><strong>01967411232</strong></p>
+                </div>
+                <div class="column3 col-lg-4">
+                    <h3>Information:</h3>
+                    <ul>
+                        <li><a href="#">
+                            Find a Car for Rent in the Nearest Location</a></li>
+                        <li><a href="#">Cars Catalog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Police</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>
